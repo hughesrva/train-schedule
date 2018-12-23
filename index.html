@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>True Choo Inc.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="text-center">True Choo Inc.</h1>
+        <h3 class="text-center">Train Schedule</h3>
+    </div>
+    <!-- main container -->
+    <div class="container">
+        <!-- current schedule outer box -->
+        <div class="card">
+            <!-- current schedule inner box -->
+            <div class="card-body">
+                <h5 class="card-title">Current Train Schedule</h5>
+                <!-- overall current schedule table -->
+                <table class="table table-light">
+                    <!-- contains table header row -->
+                    <thead id="tableHead">
+                        <!-- table header row -->
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+
+                    <!-- table body -->
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- new train outer box -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add New Train</h5>
+                <form>
+                    <!-- new train name input -->
+                    <div class="form-group">
+                        <label for="newName">Train Name</label>
+                        <input type="text" class="form-control" id="newName"></input>
+                    </div>
+                    <!-- new train destination input -->
+                    <div class="form-group">
+                        <label for="newDest">Destination</label>
+                        <input type="text" class="form-control" id="newDest"></input>
+                    </div>
+                    <!-- new train time input -->
+                    <div class="form-group">
+                        <label for="newStart">First Train Time</label>
+                        <input type="text" class="form-control" id="newStart" placeholder="HH:MM - Military Time"></input>
+                    </div>
+                    <!-- new train frequency input -->
+                    <div class="form-group">
+                        <label for="newFreq">Frequency (min)</label>
+                        <input type="number" class="form-control" id="newFreq"></input>
+                    </div>
+                    <button type="submit" class="btn" id="subBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/moment.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

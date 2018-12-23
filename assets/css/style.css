@@ -1,0 +1,20 @@
+body{
+  background-color: #bab7b7;
+}
+
+button{
+  background-color: #f09531;
+}
+
+.jumbotron{
+  background-color: #655a5a;
+  color: #ffffff;
+}
+
+input:invalid {
+    border: 1px solid red;
+  }
+
+.card{
+  margin: 20px;
+}
