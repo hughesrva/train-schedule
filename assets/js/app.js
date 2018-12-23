@@ -27,8 +27,6 @@ var newFreq = 0;
 // function to push values to firebase
 $("#subBtn").on("click", function (event) {
     event.preventDefault();
-    console.log(newFreqI.val());
-
 
     // alerts if any fields are empty
     if ($(newNameI).val() === "" || $(newDestI).val() === "" || $(newStartI).val() === "" || $(newFreq).val() === "") {
@@ -47,7 +45,7 @@ $("#subBtn").on("click", function (event) {
             dbStart: newStart,
             dbFreq: newFreq,
         })
-        console.log("items pushed");
+        // clears the form after values are pushed
         $(newNameI).val("");
         $(newDestI).val("");
         $(newStartI).val("");
@@ -58,9 +56,8 @@ $("#subBtn").on("click", function (event) {
 
 // function to get and show row values
 database.ref().orderByChild("dbDest").on("child_added", function (snapshot) {
-    console.log(snapshot);
 
-    // fb node's key
+    // db node's key
     var nodeKey = snapshot.key;
 
     // current time moment
